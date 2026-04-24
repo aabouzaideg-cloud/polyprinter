@@ -1,0 +1,106 @@
+{
+  "_comment": "Maps Polymarket slug patterns to Capital.com Epic IDs and trade direction logic.",
+  "categories": {
+    "geopolitics": {
+      "description": "Wars, conflicts, sanctions, territorial disputes",
+      "slug_keywords": ["war", "invasion", "conflict", "sanctions", "missile", "attack", "coup", "ceasefire", "invade", "nuclear", "troops", "airstrike", "nato", "blockade"],
+      "assets": [
+        { "epic": "GOLD",      "direction_on_yes": "BUY",  "rationale": "Safe-haven demand spikes on geopolitical risk" },
+        { "epic": "OIL_CRUDE", "direction_on_yes": "BUY",  "rationale": "Supply disruption premium in conflict zones" },
+        { "epic": "US500",     "direction_on_yes": "SELL", "rationale": "Risk-off flows out of equities" },
+        { "epic": "EURUSD",    "direction_on_yes": "SELL", "rationale": "USD safe-haven strengthens vs EUR" },
+        { "epic": "USDJPY",    "direction_on_yes": "SELL", "rationale": "Yen bid as risk-off safe haven" },
+        { "epic": "BTCUSD",    "direction_on_yes": "SELL", "rationale": "Risk assets sold in acute conflict scenarios" }
+      ]
+    },
+    "us_politics": {
+      "description": "US elections, impeachment, executive orders, legislation",
+      "slug_keywords": ["trump", "biden", "harris", "rubio", "desantis", "election", "president", "senate", "congress", "impeach", "executive-order", "white-house", "republican", "democrat", "gop"],
+      "assets": [
+        { "epic": "US500",     "direction_on_yes": "BUY",  "rationale": "Market-friendly policy priced in on Republican wins" },
+        { "epic": "GOLD",      "direction_on_yes": "BUY",  "rationale": "Uncertainty premium on contested outcomes" },
+        { "epic": "BTCUSD",    "direction_on_yes": "BUY",  "rationale": "Crypto-friendly administration signaling" },
+        { "epic": "EURUSD",    "direction_on_yes": "SELL", "rationale": "USD strengthens on fiscal expansion signals" },
+        { "epic": "USDJPY",    "direction_on_yes": "BUY",  "rationale": "Risk-on USD bid drives JPY lower" }
+      ]
+    },
+    "uk_eu_politics": {
+      "description": "UK Prime Minister, Brexit, EU policy, European elections",
+      "slug_keywords": ["starmer", "sunak", "uk", "britain", "brexit", "labour", "tory", "conservative", "eu", "europe", "macron", "scholz", "parliament", "chancellor"],
+      "assets": [
+        { "epic": "GBPUSD",    "direction_on_yes": "BUY",  "rationale": "Stable UK government positive for GBP" },
+        { "epic": "EURUSD",    "direction_on_yes": "BUY",  "rationale": "EU political stability supports EUR" },
+        { "epic": "GOLD",      "direction_on_yes": "BUY",  "rationale": "Political uncertainty drives safe-haven demand" },
+        { "epic": "US500",     "direction_on_yes": "SELL", "rationale": "European instability weighs on global risk appetite" }
+      ]
+    },
+    "monetary_policy": {
+      "description": "Fed rate decisions, FOMC, ECB, inflation, CPI",
+      "slug_keywords": ["fed", "rate-cut", "rate-hike", "fomc", "inflation", "cpi", "ecb", "boj", "interest-rate", "pivot", "powell", "basis-points", "taper", "qe", "quantitative"],
+      "assets": [
+        { "epic": "EURUSD",    "direction_on_yes": "BUY",  "rationale": "Rate cut weakens USD relative to EUR" },
+        { "epic": "GOLD",      "direction_on_yes": "BUY",  "rationale": "Lower real yields boost gold" },
+        { "epic": "US500",     "direction_on_yes": "BUY",  "rationale": "Cheaper borrowing inflates equity multiples" },
+        { "epic": "USDJPY",    "direction_on_yes": "SELL", "rationale": "Rate cut compresses USD/JPY carry" },
+        { "epic": "BTCUSD",    "direction_on_yes": "BUY",  "rationale": "Loose monetary policy drives BTC as inflation hedge" }
+      ]
+    },
+    "crypto_regulation": {
+      "description": "SEC rulings, ETF approvals, crypto legislation, exchange actions",
+      "slug_keywords": ["bitcoin-etf", "sec", "crypto", "ethereum", "solana", "coinbase", "binance", "regulation", "etf-approved", "bitcoin", "btc", "eth", "defi", "stablecoin", "cbdc"],
+      "assets": [
+        { "epic": "BTCUSD",    "direction_on_yes": "BUY",  "rationale": "ETF approval or bullish ruling drives BTC inflows" },
+        { "epic": "ETHUSD",    "direction_on_yes": "BUY",  "rationale": "Correlated crypto rally on positive regulatory news" },
+        { "epic": "SOLUSD",    "direction_on_yes": "BUY",  "rationale": "Altcoin beta to Bitcoin in bull moves" },
+        { "epic": "US500",     "direction_on_yes": "BUY",  "rationale": "Risk appetite broadly positive on crypto clarity" }
+      ]
+    },
+    "energy_commodities": {
+      "description": "OPEC decisions, oil supply, gas prices, energy transition",
+      "slug_keywords": ["opec", "oil", "brent", "crude", "gas-price", "energy", "lng", "pipeline", "production-cut", "barrel", "shale", "refinery", "gasoline"],
+      "assets": [
+        { "epic": "OIL_CRUDE", "direction_on_yes": "BUY",  "rationale": "Production cuts tighten supply, price up" },
+        { "epic": "GOLD",      "direction_on_yes": "BUY",  "rationale": "Inflationary pressure from energy price spike" },
+        { "epic": "EURUSD",    "direction_on_yes": "SELL", "rationale": "Europe energy-import dependent, EUR weakens" },
+        { "epic": "US500",     "direction_on_yes": "SELL", "rationale": "Higher input costs compress corporate margins" }
+      ]
+    },
+    "macro_economy": {
+      "description": "Recession, GDP, unemployment, debt ceiling, default risk",
+      "slug_keywords": ["recession", "gdp", "unemployment", "debt-ceiling", "default", "downturn", "contraction", "jobs", "payroll", "nonfarm", "pmi", "ism", "consumer-confidence"],
+      "assets": [
+        { "epic": "GOLD",      "direction_on_yes": "BUY",  "rationale": "Recession hedge, safe-haven bid" },
+        { "epic": "US500",     "direction_on_yes": "SELL", "rationale": "Earnings contraction in downturn" },
+        { "epic": "USDJPY",    "direction_on_yes": "SELL", "rationale": "Yen strengthens as risk-off safe haven" },
+        { "epic": "EURUSD",    "direction_on_yes": "SELL", "rationale": "Global risk-off favors USD over EUR" }
+      ]
+    },
+    "tech_ipo": {
+      "description": "Tech company IPOs, earnings, AI, big tech regulation",
+      "slug_keywords": ["ipo", "spacex", "openai", "apple", "nvidia", "google", "microsoft", "amazon", "meta", "tesla", "ai", "artificial-intelligence", "earnings", "valuation", "listing"],
+      "assets": [
+        { "epic": "US500",     "direction_on_yes": "BUY",  "rationale": "Major tech IPO boosts equity sentiment broadly" },
+        { "epic": "USDJPY",    "direction_on_yes": "BUY",  "rationale": "Risk-on flows weaken safe-haven JPY" },
+        { "epic": "BTCUSD",    "direction_on_yes": "BUY",  "rationale": "Tech optimism spills into risk assets including crypto" },
+        { "epic": "GOLD",      "direction_on_yes": "SELL", "rationale": "Risk-on rotation out of safe havens" }
+      ]
+    },
+    "sports": {
+      "description": "Sports betting markets — NFL, NBA, Soccer, Tennis, Esports",
+      "slug_keywords": ["nba", "nfl", "nhl", "mlb", "soccer", "football", "basketball", "tennis", "esports", "cs2", "league-of-legends", "championship", "superbowl", "worldcup", "playoff", "finals", "spread", "over-under"],
+      "assets": [
+        { "epic": "BTCUSD",    "direction_on_yes": "BUY",  "rationale": "Sports markets correlated with broader risk appetite" },
+        { "epic": "US500",     "direction_on_yes": "BUY",  "rationale": "Positive sentiment in speculative markets lifts equities" }
+      ]
+    },
+    "natural_disaster": {
+      "description": "Earthquakes, hurricanes, floods, climate events",
+      "slug_keywords": ["hurricane", "earthquake", "flood", "tsunami", "wildfire", "tornado", "disaster", "fema", "climate"],
+      "assets": [
+        { "epic": "OIL_CRUDE", "direction_on_yes": "BUY",  "rationale": "Gulf Coast disasters disrupt refinery capacity" },
+        { "epic": "GOLD",      "direction_on_yes": "BUY",  "rationale": "Safe-haven bid on uncertainty" },
+        { "epic": "US500",     "direction_on_yes": "SELL", "rationale": "Insurance liabilities and economic disruption" }
+      ]
+    }
+  }
+}
